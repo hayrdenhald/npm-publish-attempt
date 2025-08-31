@@ -1,0 +1,17 @@
+# Source files
+src/
+
+# dependencies
+node_modules
+
+# Development files  
+tsconfig.json
+pnpm-workspace.yaml
+pnpm-lock.yaml
+
+# Include built files
+!dist/
+
+# Config files
+tsconfig.json
+tsup.config.ts

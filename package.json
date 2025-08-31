@@ -1,0 +1,37 @@
+{
+  "name": "npm-publish-attempt",
+  "version": "0.0.1",
+  "description": "Just an attempt to publish a package to npm",
+  "homepage": "https://github.com/hayrdenhald/npm-publish-attempt.git",
+  "type": "module",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hayrdenhald/npm-publish-attempt.git"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "build": "tsup",
+    "release": "pnpm run build",
+    "lint": "tsc --noEmit",
+    "format": "biome check --write",
+    "format:verify": "biome check",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deps:check": "pnpm outdated",
+    "deps:audit": "pnpm audit",
+    "deps:update": "pnpm update --interactive --latest",
+    "deps:update:latest": "pnpm up --latest"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "hayrdenhald",
+  "license": "MIT",
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "@biomejs/biome": "2.2.2",
+    "tsup": "8.5.0",
+    "typescript": "5.9.2"
+  }
+}

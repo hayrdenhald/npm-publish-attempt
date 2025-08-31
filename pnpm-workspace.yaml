@@ -1,0 +1,5 @@
+onlyBuiltDependencies:
+  - "@biomejs/biome"
+  - esbuild
+useNodeVersion: 22.18.0
+savePrefix: ""
